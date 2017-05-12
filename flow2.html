@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Flowchart View 2</title>
+
+        <!-- css from jquery.flowchart -->
+        <link rel="stylesheet" href="jqueryflowchart/jquery.flowchart.css">
+        <!-- my css -->
+        <link rel="stylesheet" href="flow.css">
+    </head>
+
+    <body>
+        <div>
+            <h1>Multimodal Data Capture and Analysis Tool 2</h1>
+        </div>
+
+        <!-- Outermost div containing everything -->
+        <div id="flowchart-example">
+            <h4 id="advanced">Flowchart Drag and Drop Playground</h4>
+
+            <!-- dic containing the chart or playground -->
+            <div id="chart_container">
+
+                <!-- The actual chart -->
+                <div class="flowchart-example-container" id="example_9"></div>
+            </div>
+
+            <div class="draggable_operators">
+                <div class="draggable_operators_label">
+                    Elements (drag and drop them in the flowchart):
+                </div>
+                <div class="draggable_operators_divs">
+
+                    <!-- Sensors -->
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="5" data-name="ms_kinect_2">MS Kinect 2</div>
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="eyetribe">EyeTribe</div>
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="360_camera">360 Video Cam</div>
+
+                    <!-- Transformers -->
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="1" data-name="transformer_1">Transformer 1</div>
+
+                    <!-- Consumers -->
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_csv">Write to CSV</div>
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_txt">Write to txt</div>
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_wav">Write WAV File</div>
+
+
+                    <!-- Storage -->
+
+                </div>
+
+            </div>
+
+
+            <button class="delete_selected_button">Delete selected operator / link</button>
+            <button class="get_data">Get JSON Data</button>
+            
+
+        </div>
+
+        
+        
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script src="jqueryflowchart/jquery.flowchart.min.js"></script>
+        <script src="flow2.js" type="text/javascript"></script>
+
+    </body>
+
+</html>
