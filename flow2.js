@@ -10,7 +10,8 @@ $(document).ready(function() {
     
     // Apply the plugin on a standard, empty div...
     $flowchart.flowchart({
-      data: data
+      data: data,
+      multipleLinksOnOutput: true
     });
     $flowchart.parent().siblings('.delete_selected_button').click(function() {
       $flowchart.flowchart('deleteSelected');
@@ -46,6 +47,9 @@ $(document).ready(function() {
       };
 
       if(element_name=="ms_kinect_2"){
+
+        data.properties.operatortype="sensor";
+
         data.properties.outputs['skeleton']= {
           label: 'Skeleton'
         };
@@ -64,18 +68,25 @@ $(document).ready(function() {
 
       }
       else if(element_name=="eyetribe"){
+        data.properties.operatortype="sensor";
+
         data.properties.outputs['gaze']= {
           label: 'Raw Gaze'
         };
 
       }
       else if(element_name=="360_camera"){
+        data.properties.operatortype="sensor";
+
         data.properties.outputs['video']= {
           label: '360 Camera'
         };
 
       }
       else if(element_name=="transformer_1"){
+
+        data.properties.operatortype="transformer";
+
         data.properties.inputs['input']= {
           label: 'Input 1'
         };
@@ -85,18 +96,27 @@ $(document).ready(function() {
 
       }
       else if(element_name=="write_csv"){
+
+        data.properties.operatortype="consumer";
+
         data.properties.inputs['data']= {
           label: 'Input 1'
         };
 
       }
       else if(element_name=="write_txt"){
+
+        data.properties.operatortype="consumer";
+
         data.properties.inputs['data']= {
           label: 'Input 1'
         };
 
       }
       else if(element_name=="write_wav"){
+
+        data.properties.operatortype="consumer";
+        
         data.properties.inputs['data']= {
           label: 'Input 1'
         };

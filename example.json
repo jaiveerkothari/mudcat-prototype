@@ -1,0 +1,165 @@
+{
+  "operators": {
+    "0": {
+      "properties": {
+        "title": "MS Kinect 2",
+        "operatortype": "sensor",
+        "inputs": {},
+        "outputs": {
+          "skeleton": {
+            "label": "Skeleton"
+          },
+          "au": {
+            "label": "A U"
+          },
+          "audio": {
+            "label": "Audio" 
+          },
+          "rgb": {
+            "label": "RGB"
+          },
+          "depth": {
+            "label": "Depth"
+          }
+        }
+      },
+      "left": 40,
+      "top": 40
+    },
+    "1": {
+      "properties": {
+        "title": "EyeTribe",
+        "operatortype": "sensor",
+        "inputs": {},
+        "outputs": {
+          "gaze": {
+            "label": "Raw Gaze"
+          }
+        }
+      },
+      "left": 40,
+      "top": 240
+    },
+    "2": {
+      "properties": {
+        "title": "Transformer 1",
+        "operatortype": "transformer",
+        "inputs": {
+          "input": {
+            "label": "Input 1"
+          }
+        },
+        "outputs": {
+          "output": {
+            "label": "Output 1"
+          }
+        }
+      },
+      "left": 260,
+      "top": 240
+    },
+    "3": {
+      "properties": {
+        "title": "Write to CSV",
+        "operatortype": "consumer",
+        "inputs": {
+          "data": {
+            "label": "Input 1"
+          }
+        },
+        "outputs": {}
+      },
+      "left": 520,
+      "top": 240
+    },
+    "4": {
+      "properties": {
+        "title": "Transformer 1",
+        "operatortype": "transformer",
+        "inputs": {
+          "input": {
+            "label": "Input 1"
+          }
+        },
+        "outputs": {
+          "output": {
+            "label": "Output 1"
+          }
+        }
+      },
+      "left": 260,
+      "top": 40
+    },
+    "5": {
+      "properties": {
+        "title": "Write to CSV",
+        "operatortype": "consumer",
+        "inputs": {
+          "data": {
+            "label": "Input 1"
+          }
+        },
+        "outputs": {}
+      },
+      "left": 500,
+      "top": 40
+    },
+    "6": {
+      "properties": {
+        "title": "Write WAV File",
+        "operatortype": "consumer",
+        "inputs": {
+          "data": {
+            "label": "Input 1"
+          }
+        },
+        "outputs": {}
+      },
+      "left": 500,
+      "top": 140
+    }
+  },
+  "links": {
+    "0": {
+      "fromOperator": 1,
+      "fromConnector": "gaze",
+      "fromSubConnector": 0,
+      "toOperator": 2,
+      "toConnector": "input",
+      "toSubConnector": 0
+    },
+    "1": {
+      "fromOperator": 2,
+      "fromConnector": "output",
+      "fromSubConnector": 0,
+      "toOperator": 3,
+      "toConnector": "data",
+      "toSubConnector": 0
+    },
+    "2": {
+      "fromOperator": 0,
+      "fromConnector": "skeleton",
+      "fromSubConnector": 0,
+      "toOperator": 4,
+      "toConnector": "input",
+      "toSubConnector": 0
+    },
+    "3": {
+      "fromOperator": 4,
+      "fromConnector": "output",
+      "fromSubConnector": 0,
+      "toOperator": 5,
+      "toConnector": "data",
+      "toSubConnector": 0
+    },
+    "4": {
+      "fromOperator": 0,
+      "fromConnector": "rgb",
+      "fromSubConnector": 0,
+      "toOperator": 6,
+      "toConnector": "data",
+      "toSubConnector": 0
+    }
+  },
+  "operatorTypes": {}
+}
