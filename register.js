@@ -1,4 +1,4 @@
-{
+var rt = {
     "MS Kinect 2": [
         "<load name=\"microsoftkinect2\"/>",
         "<load name=\"graphic\" />",
@@ -39,4 +39,4 @@
 		"<load name=\"ssisignal\"/>",
 		"<load name=\"ssimodel\"/>"
     ]
-}
+};

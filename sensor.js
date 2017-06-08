@@ -1,4 +1,4 @@
-{
+var st = {
     "microsoft_kinect_2": [
         "<sensor create=\"MicrosoftKinect2\" sr=\"15.0\" trackNearestPersons=\"6\" showFaceTracking=\"true\" showBodyTracking=\"true\">",
 		"<output channel=\"rgb\" pin=\"rgb\"/>",
@@ -33,4 +33,4 @@
 		"<output channel=\"audio\" pin=\"audio\"/>",		
 	    "</sensor>"
     ]
-}
+};

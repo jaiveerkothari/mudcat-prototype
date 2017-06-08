@@ -268,3 +268,16 @@ for sensor_id in sensors:
 
 
 
+# js to add the sensor attributes to the operators
+# maybe when you click on it, a pop up appears and then you can set the attributes - fr = 5
+# set the output directory? or hard code this
+# try generating the json and then have the python script run and then have SSI run it. damn
+
+# maybe conver this script to javascript? so that you can just download the js directly?
+
+
+
+
+
+
+
