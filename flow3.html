@@ -7,20 +7,47 @@
         <!-- css from jquery.flowchart -->
         <link rel="stylesheet" href="jqueryflowchart/jquery.flowchart.css">
         <!-- my css -->
-        <link rel="stylesheet" href="css/flow.css">
-
+        <link rel="stylesheet" href="css/caroline.css">
         <script type="text/javascript" src="js/register.js"></script>
         <script type="text/javascript" src="js/sensor.js"></script>
     </head>
 
     <body>
-        <div>
-            <h1>Multimodal Data Capture and Analysis Tool</h1>
+        <div class="titles">
+            <h1> MuDCAT<h1>
+            <h3>Multimodal Data Capture and Analysis Tool</h3>
+        </div>
+
+        <div class="right-ops">
+            <button class="delete_selected_button">Delete selected</button>
+            <button class="get_data">Get JSON Data</button>
         </div>
 
         <!-- Outermost div containing everything -->
         <div id="flowchart-example">
-            <h4>Flowchart Drag and Drop Playground</h4>
+            <div class="container">
+                 <!-- Sensors -->
+                 <div id="sensors">
+                 <h2>Sensor Inputs</h2>
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="5" data-name="ms_kinect_2">MS Kinect 2</div>
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="eyetribe">EyeTribe</div>
+                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="360_camera">360 Video Cam</div>
+                 </div>
+                <div id="transformers">
+                    <h2>Data Transformers</h2>
+                    <!-- Transformers -->
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="1" data-name="transformer_1">Transformer 1</div>
+                </div>
+                <div id="outputs">
+                    <h2> Outputs </h2>
+                    <!-- Consumers -->
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_csv">Write to CSV</div>
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_txt">Write to txt</div>
+                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_wav">Write WAV File</div>
+                </div>
+                </div>
+
+                    <!-- Storage -->
 
             <!-- dic containing the chart or playground -->
             <div id="chart_container">
@@ -30,35 +57,14 @@
             </div>
 
             <div class="draggable_operators">
-                <div class="draggable_operators_label">
-                    Elements (drag and drop them in the flowchart):
-                </div>
+                
                 <div class="draggable_operators_divs">
 
-                    <!-- Sensors -->
-                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="5" data-name="ms_kinect_2">MS Kinect 2</div>
-                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="eyetribe">EyeTribe</div>
-                    <div class="draggable_operator" data-nb-inputs="0" data-nb-outputs="1" data-name="360_camera">360 Video Cam</div>
-
-                    <!-- Transformers -->
-                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="1" data-name="transformer_1">Transformer 1</div>
-
-                    <!-- Consumers -->
-                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_csv">Write to CSV</div>
-                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_txt">Write to txt</div>
-                    <div class="draggable_operator" data-nb-inputs="1" data-nb-outputs="0" data-name="write_wav">Write WAV File</div>
-
-
-                    <!-- Storage -->
-
+                    
                 </div>
 
             </div>
 
-
-            <button class="delete_selected_button">Delete selected operator / link</button>
-            <button class="get_data">Get JSON Data</button>
-            
 
         </div>
 
