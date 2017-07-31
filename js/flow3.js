@@ -234,11 +234,11 @@ $(document).ready(function() {
     //flowchart is the div with id example_9, parent is the chartcontainer div, its siblings are the buttons with class
     //.delete_selected_button
     
-    $flowchart.parent().siblings('.delete_selected_button').click(function() {
+    $flowchart.parent().parent().siblings('.right-ops').children('.delete_selected_button').click(function() {
       $flowchart.flowchart('deleteSelected');
     });
     
-    $flowchart.parent().siblings('.get_data').click(function() {
+    $flowchart.parent().parent().siblings('.right-ops').children('.get_data').click(function() {
       console.log("get data clicked");
       var data = $flowchart.flowchart('getData');
       var jsondata = JSON.stringify(data, null, 2);
